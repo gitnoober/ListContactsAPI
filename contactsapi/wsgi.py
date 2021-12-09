@@ -8,10 +8,11 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 """
 
 import os
-import dotenv
+# from dotenv import load_dotenv
 from django.core.wsgi import get_wsgi_application
 
-dotenv.read_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
+# # dotenv.read_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
+# load_dotenv()
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'contactsapi.settings')
 
