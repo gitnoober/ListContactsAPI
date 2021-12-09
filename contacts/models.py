@@ -16,4 +16,3 @@ class Contact(models.Model): #this is basically what a contact will look like
     is_fav = models.BooleanField(default=False) #by default you have no favs
     
 
-    

@@ -8,6 +8,7 @@ django = "~=3.1.0"
 djangorestframework = "*"
 pyjwt = "*"
 drf-yasg = "*"
+django-heroku = "*"
 
 [dev-packages]
 
