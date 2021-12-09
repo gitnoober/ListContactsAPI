@@ -139,7 +139,12 @@ USE_L10N = True
 USE_TZ = True
 
 #JWT
-JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
+# JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
+# if not os.environ.get('JWT_SECRET_KEY'):
+#     from dotenv import load_dotenv
+#     load_dotenv()
+
+JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY')
 
 
 # Static files (CSS, JavaScript, Images)
