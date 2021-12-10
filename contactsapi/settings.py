@@ -144,6 +144,15 @@ USE_L10N = True
 
 USE_TZ = True
 
+## CORS
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000"
+]
+
+
+
+
+
 #JWT
 # JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
 # if not os.environ.get('JWT_SECRET_KEY'):
