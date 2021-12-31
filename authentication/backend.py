@@ -18,8 +18,8 @@ class JWTAuthentication(authentication.BaseAuthentication):
         # else:
         #     token = prefixbody[1]
         tokendata = auth_data.decode('utf-8').split(' ')
-        token = tokendata[1]
-        print(tokendata , "tooooooooooooooooooo" , token)
+        token = tokendata[0]
+        # print(tokendata , "tooooooooooooooooooo" , token)
 
 
         
