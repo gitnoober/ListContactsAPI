@@ -12,11 +12,13 @@ class JWTAuthentication(authentication.BaseAuthentication):
             return None
         
 
-        prefixbody = auth_data.decode('utf-8').split(' ')
-        if len(prefixbody) == 1 :
-            token = prefixbody[0]
-        else:
-            token = prefixbody[1]
+        # prefixbody = auth_data.decode('utf-8').split(' ')
+        # if len(prefixbody) == 1 :
+        #     token = prefixbody[0]
+        # else:
+        #     token = prefixbody[1]
+        token = auth_data.decode('utf-8').split(' ')[0]
+        
         
         
         
