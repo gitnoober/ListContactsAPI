@@ -30,9 +30,9 @@ load_dotenv(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://contactlistapi.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -51,15 +51,15 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
-SWAGGER_SETTINGS = {
-    'SECURITY_DEFINITIONS': {
-        "Auth Token eg [Bearer (JWT) ]": {
-            "type": "apiKey",
-            "name": "Authorization",
-            "in": "header"
-        }
-    }
-}
+# SWAGGER_SETTINGS = {
+#     'SECURITY_DEFINITIONS': {
+#         "Auth Token eg [Bearer (JWT) ]": {
+#             "type": "apiKey",
+#             "name": "Authorization",
+#             "in": "header"
+#         }
+#     }
+# }
 
 
 REST_FRAMEWORK={
