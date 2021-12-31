@@ -11,7 +11,14 @@ class JWTAuthentication(authentication.BaseAuthentication):
         if not auth_data:
             return None
         
-        token = auth_data.decode('utf-8').split(' ')[0]
+
+        prefixbody = auth_data.decode('utf-8').split(' ')
+        if len(prefixbody) == 1 :
+            token = prefixbody[0]
+        else:
+            token = prefixbody[1]
+        
+        
         
         
         try :
