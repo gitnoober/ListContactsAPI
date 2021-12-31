@@ -32,9 +32,4 @@
 # Heroku Link :
      https://contactlistapi.herokuapp.com/
     
-# Usage :
-    virtualenv -p python3 .  // Make a virtual environment inside the directory you created.
-    source bin/activate      // Activate the environment.
-    pip install -r requirements.txt // install the dependencies.
-    Voila !
-    
+
