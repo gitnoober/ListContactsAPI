@@ -12,12 +12,14 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 import django_heroku
-
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# print(BASE_DIR)
+
+load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 
 
@@ -28,7 +30,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-_-3h@d*f2hr@hoe8#8lc!zpzimg8d-esv1*st81yuocf7(m_7f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -154,12 +156,7 @@ CORS_ALLOWED_ORIGINS = [
 
 
 #JWT
-# JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
-# if not os.environ.get('JWT_SECRET_KEY'):
-#     from dotenv import load_dotenv
-#     load_dotenv()
-
-JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
+JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY")
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
@@ -176,4 +173,3 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
-

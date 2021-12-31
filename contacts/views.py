@@ -14,6 +14,7 @@ class ContactList(ListCreateAPIView):
         serializer.save(owner = self.request.user) # looking to save on that specific user
 
     def get_queryset(self): 
+
         return Contact.objects.filter(owner=self.request.user)
 
 
@@ -31,4 +32,4 @@ class ContactDetailView(RetrieveUpdateDestroyAPIView):
     
 
 
-    
+
