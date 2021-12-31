@@ -30,7 +30,7 @@
 
 
 # Heroku Link :
-     https://letscs.herokuapp.com/
+     https://contactlistapi.herokuapp.com/
     
 # Usage :
     virtualenv -p python3 .  // Make a virtual environment inside the directory you created.
