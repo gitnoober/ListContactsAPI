@@ -2,7 +2,7 @@
 <ul>
   <li> User can register and then login.
   <li> JWT authentication is the verification mechanism of the User.
-  <li> User can use all the CRUD operations i.e, Create/Update/Update/Delete their Contact List.
+  <li> User can use all the CRUD operations.
   <li> Deployed on Heroku
     
 <hr>
